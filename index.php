@@ -65,7 +65,7 @@
 
       </div>
 
-      <h1> Welcome to ChoboMicho garage!!!</h1>
+      <h1> Welcome to ChoboMicho garage!!!!</h1>
       <br>
       <img src="gallery/civic.jpg" class="index-photo">
     </div>

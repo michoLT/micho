@@ -1,0 +1,39 @@
+    <?php include "config.php"; ?>
+     <header>
+      <a href="index.php"><img src="gallery/honda_logo.jpg" class="header-photo"></a>
+      <h2>The Power of Dreams</h2>
+    </header>
+    <nav>
+      <ul class="navmenu">
+        <li><a href="index.php" tabindex="1">Main</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="">Gallery</a><span class="darrow">&#9660;</span>
+          <ul class="sub1">
+            <li><a href="gallery-civic.php">Civic</a></li>
+            <li><a href="gallery-impreza.php">Impreza</a></li>
+          </ul>
+        <li><a href="contacts.php">Contacts</a></li>
+        <li><a href="video.php">Video</a></li>
+        <li><a href="guestbook.php">Guest book</a></li>
+      </ul>
+      <ul class="navmenu-right">
+        <?php
+        if (iMEMBER) {
+          echo "
+          <li><a href=\"log-out.php\">Log out [ $userData[username] ]</a></li>
+          <li><a href=\"my-profile.php\">My profile</a></li>
+         ";
+          if (iADMIN) {
+          echo "
+          <li><a href=\"administration.php\">Administration</a></li>
+          ";
+          }
+        } else {
+            echo "
+            <li><a href=\"registration.php\">Registration</a></li>
+            <li><a href=\"log-in.php\">Log in</a></li>
+            ";
+        }
+        ?>
+      </ul>
+    </nav>
